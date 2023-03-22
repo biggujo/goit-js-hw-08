@@ -36,6 +36,7 @@ function saveData() {
     console.log("Error!");
     console.log(e.name);
     console.log(e.message);
+    console.log(e.description);
   }
 }
 
@@ -61,5 +62,6 @@ function loadData() {
     console.log("Error!");
     console.log(e.name);
     console.log(e.message);
+    console.log(e.description);
   }
 }
