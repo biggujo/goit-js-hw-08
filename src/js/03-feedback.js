@@ -20,14 +20,19 @@ function onFormInput() {
 function onSubmit(e) {
   e.preventDefault();
 
-  saveData();
+  const {
+    elements: {
+      email,
+      message,
+    },
+  } = e.target;
 
-  if (!isFormFilled()) {
+  if (email.value === "" || message.value === "") {
+    alert("All field must be filled to proceed");
     return;
   }
 
-  console.log("The data has been send!");
-  console.table(formData);
+  console.log(formData);
   formData = {};
 
   refs.form.reset();
